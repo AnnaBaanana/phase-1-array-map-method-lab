@@ -11,6 +11,29 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+const sentence = "Anna banana cannot js"
+
+function titleCase(str) {
+  let newStr;
+  newStr = str.split(' ').map(function(element) {
+    return (element.charAt(0).toUpperCase() + 
+    element.slice(1));
+  }).join(' ')
+  return newStr;
 }
+
+const newTest = titleCase(sentence);
+
+function titleCased(array) {
+  let newArray = [];
+  for (i of array) {
+    newStr = titleCase(i);
+    newArray.push(newStr);
+    i++
+  }
+  return newArray
+}
+
+console.log(titleArray(tutorials));
+
+const finalCheck = titleArray(tutorials);
